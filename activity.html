@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 50px;
+  background-color: #474e5d;
+  color: white;
+}
+
+.activities-section {
+  padding: 20px;
+}
+
+.activity-card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.activity-image {
+  flex: 1;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.activity-image img:hover {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+.activity-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.activity-content h3 {
+  margin-top: 0;
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.activity-content p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Our Activities</h1>
+  <p>Discover the various activities we offer to engage and enrich our Magar community.</p>
+</div>
+
+<div class="activities-section">
+  <div class="activity-card">
+    <div class="activity-image">
+      <img src="dance.jpg" alt="Dance">
+    </div>
+    <div class="activity-content">
+      <h3>Dance</h3>
+      <p>Join our dance sessions where you can learn different styles of dance, <br> improve your fitness, and enjoy a fun and energetic environment.
+         <br>Be friendly and learn magar community dance step by step with help of our ancestor.
+      </p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+  </div>
+  
+  <div class="activity-card">
+    <div class="activity-image">
+      <img src="cave.jpg" alt="Cave Exploration">
+    </div>
+    <div class="activity-content">
+      <h3>Cave Exploration</h3>
+      <p>Explore the mysterious and beautiful caves with our guided tours.
+         <br> Discover underground wonders and learn about geological formations.
+
+      </p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+  </div>
+  
+  <div class="activity-card">
+    <div class="activity-image">
+      <img src="campfire.jpg" alt="Campfire">
+    </div>
+    <div class="activity-content">
+      <h3>Campfire</h3>
+      <p>Experience the joy of gathering around a campfire, sharing stories, 
+        <br>singing songs, and enjoying the warmth and camaraderie of a cozy fire.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+  </div>
+  
+  <div class="activity-card">
+    <div class="activity-image">
+      <img src="nature.jpg" alt="Nature View Point">
+    </div>
+    <div class="activity-content">
+      <h3>View Point</h3>
+      <p>Visit our stunning viewpoints to take in breathtaking vistas of nature. 
+        <br> Perfect spots for relaxation, photography, and reconnecting with nature.</p>
+      <a href="#" class="button">Learn More</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

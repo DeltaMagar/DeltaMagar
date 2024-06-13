@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  max-width: 33.3%;
+  padding: 0 8px;
+}
+
+.column.middle {
+  flex: 2;
+  max-width: 33.3%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  height: 500px; /* Default height */
+  object-fit: cover;
+}
+
+.column.middle img {
+  height: 600px; /* Increased height for the middle column */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    flex: 1;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .button {
+  background-color: #333;
+}
+
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="man bahadur.png" alt="man">
+      <div class="container">
+        <h2>Man Bahadur Thada</h2>
+        <p class="title">Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p class="button" onclick="showContacts(this, '9841571299', 'manbahadur@gmail.com')">Contact</p>
+        <ul class="contact-info"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="column middle">
+    <div class="card">
+      <img src="pal singh.png" alt="Mike">
+      <div class="container">
+        <h2>Pal Singh Gharti</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>palsingh@gmail.com</p>
+        <p class="button" onclick="showContacts(this, '9869476648', 'palsingh@gmail.com')">Contact</p>
+        <ul class="contact-info"></ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="chitrakanwar.png" alt="John">
+      <div class="container">
+        <h2>Chitra Kanwar</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>chitrakanwar@gmail.com</p>
+        <p class="button" onclick="showContacts(this, '9847170820', 'chitrakanwar@gmail.com')">Contact</p>
+        <ul class="contact-info"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showContacts(button, number, email) {
+  var contactInfo = button.nextElementSibling;
+  contactInfo.innerHTML = "<li>Number: " + number + "</li><li>Email: " + email + "</li>";
+}
+</script>
+
+</body>
+</html>

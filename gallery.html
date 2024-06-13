@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery and Video Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+        .video {
+            text-align: center;
+            margin-top: 50px;
+        }
+        video {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gallery</h1>
+    <div class="gallery">
+        <img src="campfire.jpg" alt="Image 1">
+        <img src="nature.jpg" alt="Image 2">
+        <img src="cave.jpg" alt="Image 3">
+        <img src="dance.jpg" alt="Image 4">
+        <!-- Add more images as needed -->
+    </div>
+
+    <h1>Videos</h1>
+    <div class="video">
+        <video controls>
+            <source src="assets/video/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="assets/video/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="assets/video/video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add more videos as needed -->
+    </div>
+</body>
+</html>

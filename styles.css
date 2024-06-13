@@ -1,0 +1,145 @@
+/* CSS for Body */
+body {
+  background-color: #f8f9fa; /* Light background color for the entire page */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* CSS for Navbar */
+nav {
+  background-color: #2c3e50; /* Different background color for navbar */
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e67e22;
+}
+
+/* CSS for Header */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff; /* Matching background color for header and image section */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 50px;
+}
+header p1{
+  font-style: oblique;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 25px;
+  color: #666666;
+}
+
+/* CSS for Image Boxes */
+.image-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff; /* Matching background color for header and image section */
+  flex: 1;
+}
+
+.image-box {
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 700px; /* Adjust height for better visibility */
+}
+
+.image-box img {
+  width: 100%;
+  height: 700px;
+  object-fit: fill; /* Ensures the entire image fits within the box */
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.image-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+/* CSS for Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50; /* Different background color for footer */
+  color: #ffffff;
+  margin-top: auto; /* Ensures the footer stays at the bottom */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .image-box {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .image-box {
+    flex: 1 1 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
